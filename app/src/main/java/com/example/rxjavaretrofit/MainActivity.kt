@@ -8,8 +8,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mvvmretrofit.CovidApi.Companion.TOKEN
 import com.example.mvvmretrofit.CovidViewAdapter
 import com.example.mvvmretrofit.repository.CovidRepository
-import com.example.mvvmretrofit.viewmodel.CovidViewModel
-import com.example.mvvmretrofit.viewmodel.CovidViewModelFactory
 import com.example.rxjavaretrofit.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
