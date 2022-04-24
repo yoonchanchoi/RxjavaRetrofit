@@ -1,7 +1,8 @@
-package com.example.mvvmretrofit.network
+package com.example.rxjavaretrofit.network
 
-import com.example.mvvmretrofit.CovidApi
-import com.example.mvvmretrofit.CovidService
+
+import com.example.rxjavaretrofit.CovidApi
+import com.example.rxjavaretrofit.CovidService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -29,11 +30,6 @@ object CovidRetrofit {
         return interceptor
 
     }
-
-
-
-
-
 
     val covidApiService: CovidService by lazy {
         retrofit.create(CovidService::class.java)

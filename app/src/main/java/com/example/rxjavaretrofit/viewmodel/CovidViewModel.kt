@@ -1,15 +1,12 @@
-package com.example.mvvmretrofit.viewmodel
+package com.example.rxjavaretrofit.viewmodel
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.mvvmretrofit.CovidApi
-import com.example.mvvmretrofit.CovidVO
-import com.example.mvvmretrofit.StateVO
-import com.example.mvvmretrofit.repository.CovidRepository
-import com.example.rxjavaretrofit.network.CovidClient
+import com.example.rxjavaretrofit.CovidApi
+import com.example.rxjavaretrofit.CovidVO
+import com.example.rxjavaretrofit.StateVO
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Call

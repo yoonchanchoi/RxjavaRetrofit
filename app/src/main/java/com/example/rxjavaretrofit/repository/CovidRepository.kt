@@ -1,6 +1,6 @@
-package com.example.mvvmretrofit.repository
+package com.example.rxjavaretrofit.repository
 
-import com.example.mvvmretrofit.network.CovidRetrofit
+import com.example.rxjavaretrofit.network.CovidRetrofit
 
 class CovidRepository {
 

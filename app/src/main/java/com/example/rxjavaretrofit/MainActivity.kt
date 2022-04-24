@@ -5,9 +5,9 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.mvvmretrofit.CovidApi.Companion.TOKEN
-import com.example.mvvmretrofit.CovidViewAdapter
-import com.example.mvvmretrofit.repository.CovidRepository
+import com.example.rxjavaretrofit.CovidApi.Companion.TOKEN
+import com.example.rxjavaretrofit.CovidViewAdapter
+import com.example.rxjavaretrofit.repository.CovidRepository
 import com.example.rxjavaretrofit.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

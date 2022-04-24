@@ -1,4 +1,4 @@
-package com.example.mvvmretrofit.viewmodel
+package com.example.rxjavaretrofit.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

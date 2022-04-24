@@ -1,4 +1,4 @@
-package com.example.mvvmretrofit
+package com.example.rxjavaretrofit
 
 class CovidApi {
     companion object{

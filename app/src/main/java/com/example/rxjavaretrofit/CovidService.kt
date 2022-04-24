@@ -1,5 +1,6 @@
-package com.example.mvvmretrofit
+package com.example.rxjavaretrofit
 
+import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.Call
 import retrofit2.http.GET
@@ -7,5 +8,5 @@ import retrofit2.http.Query
 
 interface CovidService{
     @GET("/korea/country/new/")
-    fun getRepos(@Query("serviceKey") serviceKey: String): Single<StateVO>
+    fun getRepos(@Query("serviceKey") serviceKey: String): Observable<StateVO>
 }

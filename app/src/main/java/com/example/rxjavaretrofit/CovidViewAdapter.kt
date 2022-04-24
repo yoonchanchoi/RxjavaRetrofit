@@ -1,4 +1,4 @@
-package com.example.mvvmretrofit
+package com.example.rxjavaretrofit
 
 import android.view.LayoutInflater
 import android.view.View

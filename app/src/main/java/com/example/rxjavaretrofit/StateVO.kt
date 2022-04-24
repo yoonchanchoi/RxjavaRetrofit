@@ -1,4 +1,4 @@
-package com.example.mvvmretrofit
+package com.example.rxjavaretrofit
 
 import com.google.gson.annotations.SerializedName
 
