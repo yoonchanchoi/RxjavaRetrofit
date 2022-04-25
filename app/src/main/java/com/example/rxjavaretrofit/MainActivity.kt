@@ -6,9 +6,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.rxjavaretrofit.CovidApi.Companion.TOKEN
-import com.example.rxjavaretrofit.CovidViewAdapter
 import com.example.rxjavaretrofit.repository.CovidRepository
 import com.example.rxjavaretrofit.databinding.ActivityMainBinding
+import com.example.rxjavaretrofit.viewmodel.CovidViewModel
+import com.example.rxjavaretrofit.viewmodel.CovidViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,5 +39,10 @@ class MainActivity : AppCompatActivity() {
         covidViewModel.liveCovidVo.observe(this, Observer { covidList ->
             covidAdapter.setList(covidList)
         })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
     }
 }

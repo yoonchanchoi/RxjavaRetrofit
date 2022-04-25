@@ -8,5 +8,5 @@ import retrofit2.http.Query
 
 interface CovidService{
     @GET("/korea/country/new/")
-    fun getRepos(@Query("serviceKey") serviceKey: String): Observable<StateVO>
+    fun getDocument(@Query("serviceKey") serviceKey: String): Observable<StateVO>
 }
