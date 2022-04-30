@@ -4,15 +4,16 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.rxjavaretrofit.CovidVO
-import com.example.rxjavaretrofit.StateVO
+import com.example.rxjavaretrofit.model.CovidVO
+import com.example.rxjavaretrofit.model.StateVO
 import com.example.rxjavaretrofit.repository.CovidRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 
 
-class CovidViewModel(private val repo: CovidRepository) :ViewModel(){
+class CovidViewModel(private val repo: CovidRepository) : ViewModel() {
 
     private val _liveCovidVo: MutableLiveData<ArrayList<CovidVO?>> = MutableLiveData()
     private val _liveStateVo: MutableLiveData<StateVO> = MutableLiveData()
@@ -27,8 +28,8 @@ class CovidViewModel(private val repo: CovidRepository) :ViewModel(){
     val liveToast: LiveData<String>
         get() = _liveToast
 
-    fun getAll(key: String){
-        disposable.add(repo.getCovidInfo(key)
+    fun getAll(key: String) {
+        repo.getCovidInfo(key)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe({
@@ -58,11 +59,11 @@ class CovidViewModel(private val repo: CovidRepository) :ViewModel(){
                 Log.d("성공성공!", regionList.toString())
                 _liveCovidVo.postValue(regionList)
 
-            },{
+            }, {
                 Log.d("실패실패..", "${it.localizedMessage.toString()}")
                 Log.d("실패실패..", "${it.message.toString()}")
                 _liveToast.postValue(it.localizedMessage)
-            }))
+            }).addTo(disposable)
     }
 
 }

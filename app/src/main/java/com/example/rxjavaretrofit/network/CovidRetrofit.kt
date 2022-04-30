@@ -1,7 +1,6 @@
 package com.example.rxjavaretrofit.network
 
 
-import com.example.rxjavaretrofit.CovidApi
 import com.example.rxjavaretrofit.CovidService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

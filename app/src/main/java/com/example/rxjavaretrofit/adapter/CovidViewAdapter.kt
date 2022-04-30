@@ -1,4 +1,4 @@
-package com.example.rxjavaretrofit
+package com.example.rxjavaretrofit.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rxjavaretrofit.R
+import com.example.rxjavaretrofit.model.CovidVO
 
 class CovidViewAdapter: RecyclerView.Adapter<CovidViewAdapter.CovidHolder?>() {
 

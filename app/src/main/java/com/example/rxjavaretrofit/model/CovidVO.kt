@@ -1,4 +1,4 @@
-package com.example.rxjavaretrofit
+package com.example.rxjavaretrofit.model
 
 import com.google.gson.annotations.SerializedName
 
